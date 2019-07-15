@@ -124,6 +124,11 @@ def num_points_scored(player_name)
   find_player(players, player_name)[:points]
 end
 
+def shoe_size
+
+end
+
+
  def players
     game_hash.map do |team, team_attributes|
         team_attributes[:players]
