@@ -2,12 +2,12 @@ class Animal
     attr_reader :species 
     attr_accessor :name
 
-    @@all = []
+    @@all_animals = []
 
     def initialize(attributes)
         @species = attributes[:species]
         @name = attributes[:name]
-        @@all << self 
+        Animal.all << self 
     end
     
     def self.speak
@@ -15,6 +15,6 @@ class Animal
     end
 
     def self.all 
-        @@all 
+        @@all_animals 
     end
 end
