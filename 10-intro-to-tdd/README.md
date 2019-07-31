@@ -10,8 +10,15 @@ Intro to Test Driven Development
 * Write tests for a basic function while considering entire problem space
 * Use output from a testing framework to guide their development
 * Explain the need for testing in general
+* Describe the difference between Unit Tests and Integration Tests
 
 ## Lecture Notes
+
+### Why do we need tests?
+
+- Certainty: knowing exactly what works and what doesn't
+- Helps map out your errors better
+- Checks for edges cases: what the programmer might NOT have thought
 
 ### What and Why
 
@@ -32,6 +39,14 @@ The need for tests.
   - Can you do something to old code with breaking?
   - Chances are, that's a "no" for most people.
   - Test help you catch errors when you make a change later on and unexpectedly break code somewhere else in your application.
+
+- Unit Tests
+  - Test a module of code in isolation from the rest of your project (without dependencies)
+  - Small in scope
+  - Easier to write
+- Integration Tests
+  - Test the entire system 
+  - Harder to write
 
 ### rspec
 
