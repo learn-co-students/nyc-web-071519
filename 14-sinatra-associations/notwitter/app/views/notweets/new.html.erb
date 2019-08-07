@@ -1,0 +1,12 @@
+<h1>this is for a definitely not TWEET 🦅</h1>
+
+
+<form class="" action="/notweets" method="post">
+  <input type="textarea" name="content" placeholder="twwwwwt💪">
+  <select name="user_id">
+    <% @users.each do |user| %>
+      <option value="<%= user.id %>"><%= user.handle %></option>
+    <% end %>
+  </select>
+  <input type="submit" name="" value="submit">
+</form>

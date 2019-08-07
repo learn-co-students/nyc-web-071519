@@ -1,0 +1,8 @@
+<h1>This is the show page for an individual instance of your model.</h1>
+
+<p>USER! :  <%= @user.handle %></p>
+<ul>
+  <% @user.no_tweets.each do |tweet| %>
+  <li><a href="/notweets/<%= tweet.id %>">   <%= tweet.content %>   </a></li>
+  <% end %>
+</ul>
