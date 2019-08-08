@@ -1,0 +1,8 @@
+<h1> the index :)</h1>
+
+
+<% @trains.each do |train| %>
+
+  <p><%= link_to train.name, train_path(train) %></p>
+
+<% end %>
