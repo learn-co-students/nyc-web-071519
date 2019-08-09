@@ -1,0 +1,11 @@
+<%= form_for(@hat) do |f| %>
+  <%= f.label :hat_type%>
+  <%= f.text_field :hat_type %>  
+  <%= f.label :size %>
+  <%= f.number_field :size %>  
+  <%= f.label :color %>
+  <%= f.text_field :color %> 
+  <%= f.label :cool %>
+  <%= f.check_box :cool %>
+  <%= f.submit :submit %>
+<% end %>

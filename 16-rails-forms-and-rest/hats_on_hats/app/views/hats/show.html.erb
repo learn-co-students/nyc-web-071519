@@ -1,0 +1,7 @@
+<h1><%= @hat.hat_type %></h1>
+<p><%= @hat.color %></p>
+<p><%= @hat.size %></p>
+<p><%= @hat.cool ? "So cool" : "Not so cool" %></p>
+
+
+<%= button_to "Delete Hat", hat_path(@hat), method: "delete"%>
