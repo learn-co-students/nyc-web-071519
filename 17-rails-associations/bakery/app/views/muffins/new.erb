@@ -1,0 +1,23 @@
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <p><%= error %></p>
+  <% end %>
+<% end %>
+
+<%= form_for(@muffin) do |f| %>
+  <%= f.label :flavor %>
+  <%= f.text_field :flavor %>
+  <%= f.label :size %>
+  <%= f.number_field :size %>
+  <%= f.label :baker_id %>
+  <%= f.collection_select(:baker_id, @bakers, :id, :name, prompt: true) %>
+
+
+  <%= f.submit %>
+<% end %>
+
+<!-- <select name="muffin[baker_id]">
+    @bakers.each do  |b|
+    <option value="b.id">b.name</option>
+    end
+</select> -->
