@@ -1,0 +1,12 @@
+<h1>Profile Page for <%= @user.username %></h1>
+
+<h3><%= flash[:notice] %></h3>
+
+<%= image_tag @user.profile_photo %>
+
+
+
+<hr>
+<%# <% if @user == current_user %>
+  <%= button_to "Delete Account", @user, method: :delete %>
+<%# <% end %>
