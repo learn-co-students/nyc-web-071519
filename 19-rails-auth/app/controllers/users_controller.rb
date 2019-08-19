@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # skip_before_action :authorized, only: [:new, :create, :show]
+  skip_before_action :authorized, only: [:new, :create, :show]
   before_action :find_user, only: [:show]
 
   def show
@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   end
 
   def profile
+    @current_user = User.find(session[:user_id])
     render :show
   end
 
@@ -16,16 +17,15 @@ class UsersController < ApplicationController
   end
 
   def create
-    byebug
     @user = User.create(user_params)
     # {username: 'hi', password: 'bye', profile_photo: 'longwwwwwsitelinkurlpicture'}
-    # if @user.valid?
-    #   flash[:notice] = "Signup successful! Welcome, #{@user.username}"
-    #   session[:user_id] = @user.id
+    if @user.valid?
+      flash[:notice] = "Signup successful! Welcome, #{@user.username}"
+      session[:user_id] = @user.id
       redirect_to user_path(@user)
-    # else
-      # render :new
-    # end
+    else
+      render :new
+    end
   end
 
   def edit
@@ -48,11 +48,12 @@ class UsersController < ApplicationController
   end
 
   private
+
   def find_user
     @user = User.find(params[:id])
   end
 
-  strong params 💪
+  # strong params 💪
   def user_params
     params.require(:user).permit(:username, :password, :profile_photo)
   end
