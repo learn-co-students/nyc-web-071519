@@ -1,14 +1,24 @@
 # Scope and closures
 
 ## SWBATs
-- [ ] Write functions in the correct syntax
-- [ ] Explain the differences and similarities between methods in Ruby and functions in JS
-- [ ] Distinguish between a function and its invocation
-- [ ] Explain what it means for functions to be first-class citizens
-- [ ] Explain variable scoping in JS
-- [ ] Explain difference between `var`, `let`, and `const`, and explain hoisting
+- [x] Write functions in the correct syntax
+- [x] Explain the differences and similarities between methods in Ruby and functions in JS
+- [x] Distinguish between a function and its invocation
+- [x] Explain difference between `var`, `let`, and `const`, and explain hoisting
+- [x] Explain what it means for functions to be first-class citizens
+- [x] Explain variable scoping in JS
 
 ![](https://media.giphy.com/media/sOGgevbtBDYKQ/giphy.gif)
+
+## Notes
+
+### var, let, const
+
+- var can be redeclared AND reassigned
+- let cannot be redeclared BUT can be reassigned
+- const cannot be redeclared NOR reassigned
+
+- var is HOISTED, let and const are NOT HOISTED
 
 ## Objectives
 
