@@ -1,0 +1,21 @@
+# Lecture Goals
+
+- DOM querying
+  - `.querySelector`, `.closest`, `.matches`
+  - Using Datasets and HTML attributes
+- Events 
+  - Event Delegation
+  - Event Handlers
+- Working with APIs
+  - Structuring fetch requests
+  - *BONUS*: Adapter Pattern
+- Client State vs Server State
+  - Optimistic vs Pessimistic rendering 
+  - Single Source of Truth
+- Debugging Best Practices
+  - Am I getting the data I expect/what is this thing? 
+    - `console.log`
+  - What do I have access to/what is in scope? 
+    - `debugger`
+  - What does this method do?
+    - MDN
