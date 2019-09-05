@@ -1,4 +1,4 @@
-# Browser Events
+# Event Delegation
 
 ## SWBATs
 - [ ] Explain event propagation and identify how it can be used
