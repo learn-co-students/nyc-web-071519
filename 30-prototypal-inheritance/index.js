@@ -1,25 +1,30 @@
-class Thief {
-  constructor(name, alias, gadgets){
-    // instance variables from ruby
+document.addEventListener("DOMContentLoaded", function(){
+  // let talon = new Thief("Alexandra Ferrante", "Talon", ["Paragliding cape", "Grappling hook"])
+  // let snakeBite = new Thief("Morgan Kesler", "Snake Bite", ["Bola", "Sleeping darts"])
+  const API = new APICommunicator()
 
-    // keys on object
-    this.name = name
-    this.alias = alias
-    this.gadgets = gadgets
-    this.inventory = []
-  }
+  API.getThieves()
+  .then(data => {
+    data.forEach(thief => {
+      new Thief(thief.id, thief.name, thief.alias, thief.gadgets)
+    })
+  })
 
-  // instance method
-  steal(artifact){
-    console.log(`${this.name} made off with the ${artifact}. The ${this.alias} strikes again!`)
-    this.inventory.push(artifact)
-  }
+  const container = document.querySelector("#thief-container")
+  container.addEventListener("click", (e) => {
+    const buttonClicked = e.target
+    if(buttonClicked.dataset.action === "delete"){
+     // grab the right thief object
+     const found = Thief.all.find(thief => {
+        return thief.id === parseInt(buttonClicked.dataset.id)
+     })
 
-  // class method (static methods)
-  static classy(){
-    console.log("So classy")
-  }
-}
+     API.deleteThieves(found.id)
+     .then(() => {
+       found.delete()
+     })
 
-let talon = new Thief("Alexandra Ferrante", "Talon", ["Paragliding cape", "Grappling hook"])
-let snakeBite = new Thief("Morgan Kesler", "Snake Bite", ["Bola", "Sleeping darts"])
+    }
+  })
+})
+

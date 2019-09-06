@@ -1,0 +1,13 @@
+{
+  "thieves": [
+    {
+      "id": 2,
+      "name": "Morgan Kesler",
+      "alias": "Snake Bite",
+      "gadgets": [
+        "Bolas",
+        "Sleeping Darts"
+      ]
+    }
+  ]
+}
