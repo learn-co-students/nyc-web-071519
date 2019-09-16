@@ -1,0 +1,42 @@
+let spies = [
+    {
+        codeName: "Aww Geez",
+        city: "Freehold",
+        image: "https://pbs.twimg.com/profile_images/1145858229466877952/Ec27YX3X_400x400.png"
+
+    },
+    {
+        codeName: "Bruce Jr",
+        city: "Moscow",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoBEpApzRsjNY9CB1QKEggcTkaBdq5ju0TX2COmkQQxaTBEqI-0w"
+
+    },
+    {
+        codeName: "007",
+        city: "London",
+        image: "https://comicvine1.cbsistatic.com/uploads/scale_small/1/15659/3978133-spies-james_bond.jpg",
+
+    },
+    {
+        codeName: "Pressure",
+        city: "New York",
+        image: "https://static.timesofisrael.com/www/uploads/2018/07/spies.jpg"
+
+    },
+    {
+        codeName: "006",
+        city: "Trenton",
+        image: "https://www.fluentin3months.com/wp-content/uploads/2017/01/improve-your-accent.jpg"
+
+    },
+    {
+        codeName: "Lil Dumplin'",
+        city: "Norwalk",
+        image: "https://www.animationmagazine.net/wordpress/wp-content/uploads/spies-in-disguise-post9.jpg"
+
+    },
+]
+
+let otherVariable = ["stuff", "more stuff"]
+
+export { spies, otherVariable }
