@@ -19,10 +19,10 @@ class App extends React.Component {
   componentDidMount() {
     let token = localStorage.getItem("token")
     if (token) {
+      //find the path the user was at prior to getting to the app component
+      let targetPath = this.props.location.pathname
       // send token to api and retrieve the user that this token belongs to 
       // when we receive user, save their info into state and redirect them to some page
-
-      let targetPath = this.props.location.pathname
       fetch('http://localhost:3000/api/v1/get_user', {
         method: "GET",
         headers: {
@@ -33,6 +33,8 @@ class App extends React.Component {
       })
         .then(resp => resp.json())
         .then(data => {
+          //set state with the user's information
+          //push that user back to whichever page they were on before this point
           this.setState({ user: data.user }, () => {
             console.log("target path: ", targetPath)
               ; this.props.history.push(targetPath)

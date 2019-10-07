@@ -1,0 +1,19 @@
+{
+  "taskList": [
+    {
+      "id": 1,
+      "task": "learn redux",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "task": "practice redux",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "task": "do redux stuff",
+      "completed": false
+    }
+  ]
+}
